@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
+import NavBar from '../src/nav'
+import { Switch } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      Hello there!
-    </div>
-  );
+class App extends Component {
+  constructor(props){
+    super(props);
+  }
+  render() {
+    return (
+      <div className="App">
+      <Switch>
+        <NavBar /> 
+      </Switch>
+        Hello
+      </div>
+    );
+  }
 }
 
-export default App;
+export default withRouter(App);
