@@ -5,7 +5,8 @@ class Quiz extends Component  {
     render() {
         return(
             <div>
-                //create a form tag here
+                Do you currently own a credit card?
+
             </div>
         )
     }
