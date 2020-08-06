@@ -4,10 +4,17 @@ import { Link } from 'react-router-dom'
 class Quiz extends Component  {
     render() {
         return(
-            <div>
-                Do you currently own a credit card?
+            <React.Fragment>
 
-            </div>
+                
+
+                
+
+            </React.Fragment>
+
+
+
+        
         )
     }
 }
