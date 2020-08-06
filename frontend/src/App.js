@@ -33,7 +33,7 @@ class App extends Component {
 
   shuffleArray(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
-  
+  /*
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
   
@@ -46,7 +46,7 @@ class App extends Component {
       array[currentIndex] = array[randomIndex];
       array[randomIndex] = temporaryValue;
     }
-  
+  */
     return array;
   };
 
