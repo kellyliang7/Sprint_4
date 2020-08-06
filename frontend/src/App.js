@@ -1,15 +1,8 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
 import quizQuestions from './api/quizQuestions';
 import Quiz from './components/Quiz';
 import Result from './components/Result';
 import logo from './svg/logo.svg';
-=======
-import NavBar from '../src/nav'
-import Quiz from '../src/quiz'
-import { Switch } from 'react-router-dom'
-import { withRouter } from 'react-router-dom';
->>>>>>> origin/master
 
 class App extends Component {
 
@@ -124,19 +117,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-<<<<<<< HEAD
         <div className="App-Header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Credit Card Questionnaire</h2>
         </div>
         {this.state.result ? this.renderResult() : this.renderQuiz()}
-=======
-      <Switch>
-        
-        <Quiz />
-      </Switch>
-
->>>>>>> origin/master
       </div>
     );
   }
