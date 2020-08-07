@@ -14,7 +14,7 @@ function Result(props) {
       transitionAppearTimeout={500}
     >
       <div>
-        The recommended credit card for you is: <strong>{props.quizResult}</strong>!
+        The recommended credit card for you is: <strong>{props.quizResult}</strong>.
       </div>
     </CSSTransitionGroup>
   );

@@ -8,7 +8,7 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-
+    this.state = { apiResponse: "" };
     this.state = {
       counter: 0,
       questionId: 1,
@@ -20,7 +20,18 @@ class App extends Component {
     };
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
 
+    
   }  
+
+  callAPI() {
+    fetch("http://localhost:9000/testAPI")
+        .then(res => res.text())
+        .then(res => this.setState({ apiResponse: res }));
+  }
+
+  componentWillMount() {
+    this.callAPI();
+  }
 
   componentDidMount() {
     const shuffledAnswerOptions = quizQuestions.map((question) => this.shuffleArray(question.answers));  
@@ -33,20 +44,6 @@ class App extends Component {
 
   shuffleArray(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
-  /*
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-  
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-  
-      // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-    }
-  */
     return array;
   };
 
@@ -122,6 +119,7 @@ class App extends Component {
           <h2>Credit Card Questionnaire</h2>
         </div>
         {this.state.result ? this.renderResult() : this.renderQuiz()}
+        <p className="App-intro">;{this.state.apiResponse}</p>
       </div>
     );
   }
