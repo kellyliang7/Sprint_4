@@ -3,6 +3,7 @@ import quizQuestions from './api/quizQuestions';
 import Quiz from './components/Quiz';
 import Result from './components/Result';
 import logo from './svg/logo.svg';
+import KommunicateChat from './chat';
 
 class App extends Component {
 
@@ -19,8 +20,6 @@ class App extends Component {
       result: ''
     };
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
-
-    
   }  
 
   callAPI() {
@@ -120,6 +119,7 @@ class App extends Component {
         </div>
         {this.state.result ? this.renderResult() : this.renderQuiz()}
         <p className="App-intro">;{this.state.apiResponse}</p>
+        <div> <KommunicateChat/> </div>
       </div>
     );
   }
